@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExtraPart1 = () => {
     return (
-        <div className='container mt-4'>
+        <div id='Service' className='container mt-4'>
             <h3 className='text-center text-uppercase'>Service</h3>
             <div className='row text-center'>
                 <div className='col-lg-4 col-12'>
