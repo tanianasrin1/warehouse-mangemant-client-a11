@@ -2,13 +2,14 @@ import React from 'react';
 import './ExtraPart2.css'
 import { ArrowRightIcon } from '@heroicons/react/solid'
 import image1 from '../../../images/image/email (1).png'
+import './ExtraPart2.css'
 
 const ExtraPart2 = () => {
     return (
         <div className='background-color'>
             <hr />
-            <div className='container'>
-                <div className='row m-5 p-5'>
+            <div className='container extraPart'>
+                <div className='row extraPart-items'>
                     <div className='col-lg-6 col-12'>
                         <h1>Support & Inquiry</h1>
                         <br />

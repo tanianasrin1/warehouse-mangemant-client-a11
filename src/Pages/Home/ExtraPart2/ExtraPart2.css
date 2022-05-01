@@ -1,13 +1,15 @@
+.extraPart{
+    height: 650px;
+    margin-top: 150px;
+}
+
 .background-color{
-    background-color: rgb(250, 236, 209)
+    background-color: rgb(250, 236, 209);
+    height: 100%;
 }
 
 .text-design{
     margin-left: 65px;
 }
 
-.icon-size{
-    font-size:small;
-    
-    
-}
+
