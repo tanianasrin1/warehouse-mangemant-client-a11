@@ -1,48 +1,52 @@
-import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+// import React, { useRef } from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import './Register.css'
 
 const Register = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth); 
     const navigate = useNavigate(); 
     
     const handleRegister = event => {
         event.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        console.log(event.target)
+    
 
-        console.log(email, password);
+        createUserWithEmailAndPassword( email, password)
     }
 
-    const navigateLogin = event => {
-        navigate('/login')
+    const navigateLogin = () => {
+        navigate('/login');
     }
+
+    if(user){
+      navigate('/home')
+    }
+
     return (
-        <div className='container w-50 mx-auto'>
-            <h2 className='text-center text-primary mt-2'>Please Register!!!</h2>
-            <Form onSubmit={handleRegister}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control ref={passwordRef} type="password" placeholder="Password"  required/>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button className="login-button" variant="primary" type="submit">
-          Register
-        </Button>
-      </Form>
+      <div className='register-form mt-4'>
+      <h2 style={{textAlign: 'center'}} className="register-title">Please Register!!!</h2>
+      <form  onSubmit={handleRegister} >
+          <input type="text" name="name" id="" placeholder='Your name' />
+          
+          <input type="email" name="email" id="" placeholder='Your email' required/>
+          
+          <input type="password" name="password" id=""  placeholder='Your password' required/>
+          <input type="submit" value="Register" />
+      </form>
+     
       <p>Already have an account? <span className="text-danger" onClick={navigateLogin}>Please Login</span> </p>
-        </div>
+      
+  </div>
     );
 };
 
