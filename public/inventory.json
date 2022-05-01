@@ -1,0 +1,57 @@
+[
+    {
+        "img":"https://i.ibb.co/6rV9x4J/saffola-active-plus-edible-oil-5-ltr.webp",
+        "name":"Saffola Active Plus Edible Oil",
+        "description":"Significance in the edible oil market.",
+        "price":1600 ,
+        "quantity":"5 ltr",
+        "Supplier":"Mr. Jhon",
+        "id":1
+    },
+    {
+        "img":"https://i.ibb.co/sgpwr7M/royal-chef-fortified-sunflower-oil-5-ltr.webp",
+        "name":"Royel Chef FOrtified Sunflower Oil",
+        "description":"Fortune Rice Bran Health whilst",
+        "price":1280 ,
+        "quantity":"5 ltr",
+        "Supplier":"Mr. Smith",
+        "id":2
+    },
+    {
+        "img":"https://i.ibb.co/ydKxkbP/meizan-palm-olein-pet-5-ltr.webp",
+        "name":"Meizan Palm Olein Pet",
+        "description":"Survival are adaption and innovation.",
+        "price":870 ,
+        "quantity":"5 ltr",
+        "Supplier":"Mrs. Samba ",
+        "id":3
+    },
+    {
+        "img":"https://i.ibb.co/C0r0P9X/rupchanda-fortified-soyabean-oil-poly-1-ltr.webp",
+        "name":"Rupchanda Fortified Soyabean Oil",
+        "description":"Introduction of the rice bran oil",
+        "price":190 ,
+        "quantity":"1 ltr",
+        "Supplier":"Mr. Karzon",
+        "id":4
+    },
+    {
+        "img":"https://i.ibb.co/YkNyxNv/olitalia-fortified-sunflower-oil-5-ltr.webp",
+        "name":"Fortune Fortified Rice Bran Oil",
+        "description":"Selling and most popular cooking brand.",
+        "price":980 ,
+        "quantity":"5 ltr",
+        "Supplier":"Mrs. Sufiyan ",
+        "id":5
+    },
+    {
+        "img":"https://i.ibb.co/yS0RwFQ/ghani-mustard-oil-500-ml.webp",
+        "name":"Ghani Mustard Oil",
+        "description":"Blood and prevents heart diseases.",
+        "price": 155 ,
+        "quantity":"500 ml",
+        "Supplier":"Mr. Jacky",
+        "id":6
+    }
+  
+]

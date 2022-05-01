@@ -7,6 +7,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import InventoryItems from './Pages/Home/InventoryItems/InventoryItems';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/inventoryItems" element={<InventoryItems></InventoryItems>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes> 
         
