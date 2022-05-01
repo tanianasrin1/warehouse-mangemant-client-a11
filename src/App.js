@@ -9,6 +9,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import InventoryItems from './Pages/Home/InventoryItems/InventoryItems';
 import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 
 
 
@@ -25,6 +27,8 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/inventory/:inventoryId" element={<InventoryDetail></InventoryDetail>}></Route>
         <Route path="/inventoryItems" element={<InventoryItems></InventoryItems>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes> 
         
