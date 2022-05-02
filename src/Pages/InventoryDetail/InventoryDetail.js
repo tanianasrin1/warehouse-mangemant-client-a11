@@ -6,6 +6,7 @@ const InventoryDetail = () => {
     return (
         <div>
             <h2>welcome to detail: {inventoryId} </h2>
+            
         </div>
     );
 };
