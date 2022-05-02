@@ -36,13 +36,67 @@
         "id":4
     },
     {
-        "img":"https://i.ibb.co/YkNyxNv/olitalia-fortified-sunflower-oil-5-ltr.webp",
-        "name":"Fortune Fortified Rice Bran Oil",
+        "img":"https://i.ibb.co/0YL5JtT/f1.webp",
+        "name":"Olitalia Pomace Olive",
         "description":"Selling and most popular cooking brand.",
-        "price":980 ,
-        "quantity":"5 ltr",
-        "Supplier":"Mrs. Sufiyan ",
+        "price":1280 ,
+        "quantity":"4 ltr",
+        "Supplier":"Mrs. Jampa ",
         "id":5
+    },
+    {
+        "img":"https://i.ibb.co/k9L3MFW/f2.webp",
+        "name":"King Sunflower Oil",
+        "description":"Benefits of the adjustment with the sharp oil",
+        "price":880 ,
+        "quantity":"3 ltr",
+        "Supplier":"Mrs. mession ",
+        "id":6
+    },
+    {
+        "img":"https://i.ibb.co/VNkWXw1/f3.webp",
+        "name":"Khass Food Black Seed Oil",
+        "description":" useful to the all stakeholders even policy makers.",
+        "price":1400 ,
+        "quantity":"5 ltr",
+        "Supplier":"Mrs. mompo ",
+        "id":7
+    },
+    {
+        "img":"https://i.ibb.co/LZJn6L7/f4webp.webp",
+        "name":"Dhaka Dough Black Cumin Oil",
+        "description":"Sharp fall oil price to the economy of Bangladesh",
+        "price":980 ,
+        "quantity":"4 ltr",
+        "Supplier":"Mr. karamian ",
+        "id":8
+    },
+    {
+        "img":"https://i.ibb.co/mSBsmd5/f5.webp",
+        "name":"Yo WE Fragrance Sesame Oil",
+        "description":"well using purely secondary data collected",
+        "price":680 ,
+        "quantity":"2 ltr",
+        "Supplier":"Mrs. Chandania ",
+        "id":9
+    },
+    {
+        "img":"https://i.ibb.co/LZJn6L7/f4webp.webp",
+        "name":"Ceylon Organic Extra Virgin Coconut Oil",
+        "description":"This research work outlined the main reasons",
+        "price":949 ,
+        "quantity":"500 ml",
+        "Supplier":"Mr Borges   ",
+        "id":10
+    },
+    {
+        "img":"https://i.ibb.co/LZJn6L7/f4webp.webp",
+        "name":"Oro De Canava Extra Virgin Olive Oil",
+        "description":"Sensational energy story in the world.",
+        "price":1149 ,
+        "quantity":"1 ltr",
+        "Supplier":"Mrs. Econutrena ",
+        "id":11
     },
     {
         "img":"https://i.ibb.co/yS0RwFQ/ghani-mustard-oil-500-ml.webp",
@@ -51,7 +105,7 @@
         "price": 155 ,
         "quantity":"500 ml",
         "Supplier":"Mr. Jacky",
-        "id":6
+        "id":12
     }
   
 ]
