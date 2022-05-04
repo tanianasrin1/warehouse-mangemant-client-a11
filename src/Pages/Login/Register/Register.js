@@ -11,7 +11,7 @@ const Register = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth); 
+  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true}); 
     const navigate = useNavigate(); 
     let errorElement;
     
@@ -57,6 +57,7 @@ const Register = () => {
       {errorElement}
      
       <p>Already have an account? <span className="text-danger" onClick={navigateLogin}>Please Login</span> </p>
+      
       <SocialLogin></SocialLogin>
   </div>
     );
