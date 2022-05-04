@@ -13,6 +13,7 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth); 
     const navigate = useNavigate(); 
+    let errorElement;
     
     const handleRegister = event => {
         event.preventDefault();
@@ -33,6 +34,14 @@ const Register = () => {
       navigate('/home')
     }
 
+    if(error) {
+
+      errorElement = <div>
+           <p className='text-danger'>Error: {error.message} </p>
+     </div>
+      
+    }
+
     return (
       <div className='register-form mt-5'>
       <h2 style={{textAlign: 'center'}} className="text-primary">Please Register!!!</h2>
@@ -42,8 +51,10 @@ const Register = () => {
           <input type="email" name="email" id="" placeholder='Your email' required/>
           
           <input type="password" name="password" id=""  placeholder='Your password' required/>
-          <input  type="submit" value="Register" />
+          <input className='btn btn-primary w-50 mx-auto' type="submit" value="Register" />
       </form>
+
+      {errorElement}
      
       <p>Already have an account? <span className="text-danger" onClick={navigateLogin}>Please Login</span> </p>
       <SocialLogin></SocialLogin>

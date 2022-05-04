@@ -11,17 +11,26 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate(); 
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname || '/';
+    let errorElement;
 
     const [
       signInWithEmailAndPassword,
       user,
-      
-      error
+      loading,
+      error,
     ] = useSignInWithEmailAndPassword(auth);
 
     if(user){
       navigate(from, {replace: true});
+    }
+
+    if(error) {
+
+      errorElement = <div>
+           <p className='text-danger'>Error: {error.message} </p>
+     </div>
+      
     }
 
     const handleSubmit = event => {
@@ -49,10 +58,11 @@ const Login = () => {
           <Form.Control ref={passwordRef} type="password" placeholder="Password"  required/>
         </Form.Group>
       
-        <Button className="login-button" variant="primary" type="submit">
+        <Button className="login-button w-50 mx-auto d-block mb-2" variant="primary" type="submit">
           Login
         </Button>
       </Form>
+      {errorElement}
       <p>New to website? <span className="text-danger" onClick={navigateRegister}>Please Register</span> </p>
       <SocialLogin></SocialLogin>
     </div>
