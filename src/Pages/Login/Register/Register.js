@@ -2,8 +2,10 @@
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import './Register.css'
+import './Register.css';
+
 
 const Register = () => {
   const [
@@ -28,6 +30,10 @@ const Register = () => {
 
     const navigateLogin = () => {
         navigate('/login');
+    }
+    
+    if(loading){
+      return <Loading></Loading>
     }
 
     if(user){
