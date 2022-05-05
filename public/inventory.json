@@ -4,7 +4,8 @@
         "name":"Saffola Active Plus Edible Oil",
         "description":"Significance in the edible oil market.",
         "price":1600 ,
-        "quantity":"5 ltr",
+        "quantity": 10,
+        "limit":"5 ltr",
         "Supplier":"Mr. Jhon",
         "id":1
     },
@@ -13,7 +14,8 @@
         "name":"Royel Chef FOrtified Sunflower Oil",
         "description":"Fortune Rice Bran Health whilst",
         "price":1280 ,
-        "quantity":"5 ltr",
+        "quantity":12,
+        "limit":"4 ltr",
         "Supplier":"Mr. Smith",
         "id":2
     },
@@ -22,7 +24,8 @@
         "name":"Meizan Palm Olein Pet",
         "description":"Survival are adaption and innovation.",
         "price":870 ,
-        "quantity":"5 ltr",
+        "quantity":8,
+        "limit":"9 ltr",
         "Supplier":"Mrs. Samba ",
         "id":3
     },
@@ -31,7 +34,8 @@
         "name":"Rupchanda Fortified Soyabean Oil",
         "description":"Introduction of the rice bran oil",
         "price":190 ,
-        "quantity":"1 ltr",
+        "quantity":9 ,
+        "limit":"7 ltr",
         "Supplier":"Mr. Karzon",
         "id":4
     },
@@ -40,7 +44,8 @@
         "name":"Olitalia Pomace Olive",
         "description":"Selling and most popular cooking brand.",
         "price":1280 ,
-        "quantity":"4 ltr",
+        "quantity":4,
+        "limit":"5 ltr",
         "Supplier":"Mrs. Jampa ",
         "id":5
     },
@@ -49,7 +54,8 @@
         "name":"King Sunflower Oil",
         "description":"Benefits of the adjustment with the sharp oil",
         "price":880 ,
-        "quantity":"3 ltr",
+        "quantity":13,
+        "limit":"4 ltr",
         "Supplier":"Mrs. mession ",
         "id":6
     },
@@ -58,7 +64,8 @@
         "name":"Khass Food Black Seed Oil",
         "description":" useful to the all stakeholders even policy makers.",
         "price":1400 ,
-        "quantity":"5 ltr",
+        "quantity":15,
+        "limit":"6 ltr",
         "Supplier":"Mrs. mompo ",
         "id":7
     },
@@ -67,7 +74,8 @@
         "name":"Dhaka Dough Black Cumin Oil",
         "description":"Sharp fall oil price to the economy of Bangladesh",
         "price":980 ,
-        "quantity":"4 ltr",
+        "quantity":14,
+        "limit":"3 ltr",
         "Supplier":"Mr. karamian ",
         "id":8
     },
@@ -76,7 +84,8 @@
         "name":"Yo WE Fragrance Sesame Oil",
         "description":"well using purely secondary data collected",
         "price":680 ,
-        "quantity":"2 ltr",
+        "quantity":22 ,
+        "limit":"7 ltr",
         "Supplier":"Mrs. Chandania ",
         "id":9
     },
@@ -85,7 +94,8 @@
         "name":"Ceylon Organic Extra Virgin Coconut Oil",
         "description":"This research work outlined the main reasons",
         "price":949 ,
-        "quantity":"500 ml",
+        "quantity": 17,
+        "limit":"4 ltr",
         "Supplier":"Mr Borges   ",
         "id":10
     },
@@ -94,7 +104,8 @@
         "name":"Oro De Canava Extra Virgin Olive Oil",
         "description":"Sensational energy story in the world.",
         "price":1149 ,
-        "quantity":"1 ltr",
+        "quantity": 11,
+        "limit":"2 ltr",
         "Supplier":"Mrs. Econutrena ",
         "id":11
     },
@@ -103,7 +114,8 @@
         "name":"Ghani Mustard Oil",
         "description":"Blood and prevents heart diseases.",
         "price": 155 ,
-        "quantity":"500 ml",
+        "quantity":18,
+        "limit":"3 ltr",
         "Supplier":"Mr. Jacky",
         "id":12
     }

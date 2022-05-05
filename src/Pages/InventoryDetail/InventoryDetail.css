@@ -1,0 +1,16 @@
+.details-img{
+    width: 100px;
+    height: 80px;
+}
+
+.inventory-detail{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.detail-button{
+    border: none;
+    background-color: lightgreen;
+    padding: 12px;
+    border-radius: 5px;
+}
