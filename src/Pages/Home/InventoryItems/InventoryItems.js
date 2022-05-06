@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import InventoryItem from '../InventoryItem/InventoryItem';
 import './InventoryItems.css'
 
 const InventoryItems = () => {
     const [inventories, setInventories] = useState([]);
+    const navigate = useNavigate();
 
     useEffect( () => {
-        fetch('http://localhost:5000/inventory1')
+        fetch('http://localhost:5000/inventory')
         .then(res => res.json())
         .then(data => setInventories(data))
     } ,[])
@@ -18,9 +19,9 @@ const InventoryItems = () => {
              <div className='inventories-container'>
              {
                inventories.slice(0,6).map(inventory => <InventoryItem
-                    key={inventory.id}
+                    key={inventory._id}
                     inventory = {inventory}
-               ></InventoryItem>) 
+               >   <button onClick= { () => navigate(`/inventory/${inventory._id}`)}> Update </button> </InventoryItem>) 
             }
 
              <Link to = '/manageInventory'>Manage inventory </Link>

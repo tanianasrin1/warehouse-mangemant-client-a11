@@ -9,17 +9,32 @@ const InventoryDetail = () => {
  
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory1/${inventoryId}`;
+    const url = `http://localhost:5000/inventory/${inventoryId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, []);
 
   const updateQuantity = () => {
-    const {quantity, ...rest} = inventory;
+    const {quantity, sold, ...rest} = inventory;
     const newQuantity = quantity-1;
-    const newInventory = {quantity: newQuantity, ...rest};
+    const newSold = sold+1;
+    const newInventory = {quantity: newQuantity, sold: newSold, ...rest};
     setInventory(newInventory);
+
+    const url = `http://localhost:5000/Inventory/${inventoryId}`
+    fetch(url, {
+      method : 'PUT',
+      headers: {
+        'content-type' : 'application/json'
+      },
+      body: JSON.stringify(newInventory)
+      
+
+    }).then(res=> res.json())
+    .then(data => console.log(data))
+    
+    
     
   }
 
@@ -30,7 +45,24 @@ const InventoryDetail = () => {
     const newQuantity = quantity+parseInt(stockCount);
     const newInventory = {quantity: newQuantity, ...rest};
     setInventory(newInventory);
+
+    const url = `http://localhost:5000/Inventory/${inventoryId}`
+    fetch(url, {
+      method : 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newInventory)
+      
+
+    }).then(res=> res.json())
+    .then(data => console.log(data))
+
+    e.target.number.value = ''
+    
   }
+
+  
 
   return (
     <div className="inventory-detail w-25 text-center mx-auto mt-5">
@@ -41,16 +73,18 @@ const InventoryDetail = () => {
         <p>Quantity: {inventory.quantity} </p>
         <p>Price: {inventory.price} </p>
         <p> {inventory.limit} </p>
+        <p>Sold: {inventory.sold} </p>
         <p>Supplier Name: {inventory.Supplier} </p>
         <p>
           <small>description: {inventory.description} </small>
         </p>
-        <button onClick={updateQuantity} className="mb-3 detail-button">Delivered</button>
+        
       <form onSubmit={handleQuantity}>
           <input type="number" placeholder="update stock" name="number" id="" />
           <input type="submit" value="update" />
+          
       </form>
-
+      <button onClick={updateQuantity} className="mb-3 detail-button">Delivered</button>
     </div>
 
     
