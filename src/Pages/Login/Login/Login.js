@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import axios from 'axios';
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import './Login.css';
@@ -30,9 +31,7 @@ const Login = () => {
       return <Loading></Loading>
     }
 
-    if(user){
-      navigate(from, {replace: true});
-    }
+   
 
     if(error) {
 
@@ -42,12 +41,17 @@ const Login = () => {
       
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async(event) => {
+       
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-
-        signInWithEmailAndPassword(email, password);
+        
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/getToken', {email});
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, {replace: true});
+        console.log(data)
     }
 
     const navigateRegister = event => {

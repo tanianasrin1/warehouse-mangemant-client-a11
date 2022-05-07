@@ -1,15 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import InventoryItem from '../Home/InventoryItem/InventoryItem';
+import {useAuthState} from 'react-firebase-hooks/auth'
+import auth from '../../firebase.init';
 import './MyItem.css'
+import axios from 'axios';
+
 
 const MyItem = () => {
+    const [user] = useAuthState(auth);
+
     const [inventories, setInventories ] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/inventory')
+       
+       
+            
+        const getItem = async() => {
+            const email = user?.email;
+            const url= `http://localhost:5000/myItem?email=${email}`
+            const {data} = await axios.get(url, {
+                headers: {
+                  authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+                },
+              })
+              setInventories(data)
+        }
+           
+         
+    getItem()
         
-        .then(res => res.json())
-        .then(data => setInventories(data))
-    },[])
+        
+       
+    },[user])
+     console.log(inventories)
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if(proceed){

@@ -17,6 +17,9 @@ const InventoryDetail = () => {
 
   const updateQuantity = () => {
     const {quantity, sold, ...rest} = inventory;
+    if(quantity <= 0){
+      return;
+    }
     const newQuantity = quantity-1;
     const newSold = sold+1;
     const newInventory = {quantity: newQuantity, sold: newSold, ...rest};
