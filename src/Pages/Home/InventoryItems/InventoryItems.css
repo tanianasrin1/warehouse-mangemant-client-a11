@@ -5,6 +5,16 @@
     
 }
 
+.manage-button{
+    text-decoration: none;
+    color: black;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 5px;
+    
+}
+
 /* make inventoryItem responsive  */
 @media only screen and (max-width: 576px) {
     .inventories-container{

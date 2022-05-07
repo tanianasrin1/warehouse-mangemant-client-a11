@@ -28,7 +28,7 @@ const MyItem = () => {
     }
     return (
         <div className='container'>
-        <h2>This is my item page</h2>
+        <h2 className='text-center mt-3'> My Item Page</h2>
          <div className='inventoryItem'>
          {
             inventories.map(inventory => <InventoryItem 

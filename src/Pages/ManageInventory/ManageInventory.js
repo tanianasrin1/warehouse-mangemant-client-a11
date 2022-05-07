@@ -26,7 +26,7 @@ const ManageInventory = () => {
 
     return (
         <div className='container'>
-            <h2>This is manageInventory page</h2>
+            <h2 className='mt-3 text-center'> ManageInventory page</h2>
              <div className='inventoryItem'>
              {
                 inventories.map(inventory => <InventoryItem 

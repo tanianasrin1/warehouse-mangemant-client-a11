@@ -65,8 +65,11 @@ const InventoryDetail = () => {
   
 
   return (
-    <div className="inventory-detail w-25 text-center mx-auto mt-5">
-      
+  
+  
+    <div className="container">
+       <h3 className="text-center mt-3">InventoryDetails</h3>
+      <div className="inventory-detail w-50 text-center mx-auto mt-5 mb-4">
         <h4>Name: {inventory.name} </h4>
         <img className="details-img" src={inventory.img} alt="" />
         <p>Id: {inventoryId} </p>
@@ -79,12 +82,14 @@ const InventoryDetail = () => {
           <small>description: {inventory.description} </small>
         </p>
         
-      <form onSubmit={handleQuantity}>
+        <form onSubmit={handleQuantity}>
           <input type="number" placeholder="update stock" name="number" id="" />
-          <input type="submit" value="update" />
+          <input className="mx-2" type="submit" value="update" />
           
-      </form>
-      <button onClick={updateQuantity} className="mb-3 detail-button">Delivered</button>
+        </form>
+        <button onClick={updateQuantity} className="mb-3 detail-button mt-2">Delivered</button>
+      </div>
+
     </div>
 
     

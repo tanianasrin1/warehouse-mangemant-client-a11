@@ -24,7 +24,7 @@ const InventoryItems = () => {
                >   <button onClick= { () => navigate(`/inventory/${inventory._id}`)}> Update </button> </InventoryItem>) 
             }
 
-             <Link to = '/manageInventory'>Manage inventory </Link>
+             <Link className='manage-button' to = '/manageInventory'>Manage inventory </Link>
              </div>
 
         </div>
