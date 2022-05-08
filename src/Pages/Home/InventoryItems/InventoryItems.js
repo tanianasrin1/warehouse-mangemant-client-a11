@@ -8,7 +8,7 @@ const InventoryItems = () => {
     const navigate = useNavigate();
 
     useEffect( () => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://mysterious-bastion-52209.herokuapp.com/inventory')
         .then(res => res.json())
         .then(data => setInventories(data))
     } ,[])

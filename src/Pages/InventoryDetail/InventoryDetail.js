@@ -9,7 +9,7 @@ const InventoryDetail = () => {
  
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${inventoryId}`;
+    const url = `https://mysterious-bastion-52209.herokuapp.com/inventory/${inventoryId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventory(data));
@@ -25,7 +25,7 @@ const InventoryDetail = () => {
     const newInventory = {quantity: newQuantity, sold: newSold, ...rest};
     setInventory(newInventory);
 
-    const url = `http://localhost:5000/Inventory/${inventoryId}`
+    const url = `https://mysterious-bastion-52209.herokuapp.com/Inventory/${inventoryId}`
     fetch(url, {
       method : 'PUT',
       headers: {
@@ -49,7 +49,7 @@ const InventoryDetail = () => {
     const newInventory = {quantity: newQuantity, ...rest};
     setInventory(newInventory);
 
-    const url = `http://localhost:5000/Inventory/${inventoryId}`
+    const url = `https://mysterious-bastion-52209.herokuapp.com/Inventory/${inventoryId}`
     fetch(url, {
       method : 'PUT',
       headers: {
