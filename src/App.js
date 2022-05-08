@@ -50,7 +50,11 @@ function App() {
             <AddItem></AddItem>
           </RequireAuth>
         }></Route>
-        <Route path='/myItem' element={<MyItem></MyItem>}></Route>
+        <Route path='/myItem' element={
+          <RequireAuth>
+          <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes> 
         

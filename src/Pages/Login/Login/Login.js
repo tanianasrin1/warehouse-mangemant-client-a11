@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import axios from 'axios';
@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const [user1] = useAuthState(auth);
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate(); 
@@ -18,6 +19,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
     let errorElement;
 
+   
     const [
       signInWithEmailAndPassword,
       user,
@@ -26,6 +28,13 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    useEffect(() =>{
+      if(user1){
+        navigate(from, {replace: true});
+      }
+
+    },[user1])
 
     if(loading || sending){
       return <Loading></Loading>
@@ -50,13 +59,15 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         const {data} = await axios.post('https://mysterious-bastion-52209.herokuapp.com/getToken', {email});
         localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, {replace: true});
+        // navigate(from, {replace: true});
         console.log(data)
     }
 
     const navigateRegister = event => {
         navigate('/register')
     }
+    
+   
 
     const resetPassword = async() => {
       const email = emailRef.current.value;

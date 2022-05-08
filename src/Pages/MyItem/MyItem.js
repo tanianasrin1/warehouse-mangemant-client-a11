@@ -12,17 +12,22 @@ const MyItem = () => {
     const [inventories, setInventories ] = useState([]);
     useEffect( () => {
        
-       
+        console.log(user)
             
         const getItem = async() => {
             const email = user?.email;
             const url= `https://mysterious-bastion-52209.herokuapp.com/myItem?email=${email}`
-            const {data} = await axios.get(url, {
-                headers: {
-                  authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-                },
-              })
-              setInventories(data)
+               if(email){
+
+                const {data} = await axios.get(url, {
+                    headers: {
+                      authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+                    },
+                  })
+                  setInventories(data)
+                //   console.log(data)
+               }
+              
         }
            
          
@@ -31,7 +36,7 @@ const MyItem = () => {
         
        
     },[user])
-     console.log(inventories)
+    //  console.log(inventories)
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if(proceed){
@@ -41,7 +46,7 @@ const MyItem = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 const remaining = inventories.filter(inventory => inventory._id !==id)
                 setInventories(remaining);
             })

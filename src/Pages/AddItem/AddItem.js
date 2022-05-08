@@ -16,14 +16,17 @@ const AddItem = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-      console.log(data);
+      // console.log(data);
+
+      const product = {...data, email};
+      console.log(product)
       const url = `https://mysterious-bastion-52209.herokuapp.com/inventory`;
       fetch(url, {
           method: 'POST',
           headers: {
               'content-type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(product)
 
       })
       .then(res => res.json())
@@ -46,7 +49,7 @@ const AddItem = () => {
           <input className="mb-2" placeholder="Price" type="number" {...register("price")} />
           <input className="mb-2" placeholder="Quantity" type="number" {...register("quantity")} />
           <input className="mb-2" placeholder="Photo URL" type="text" {...register("img")} />
-          <input className="mb-2" value={email} type="text" {...register("email")} />
+          {/* <input className="mb-2" value={email} type="text" {...register("email")} /> */}
           <input type="submit" value='Add Product' />
         </form>
       </div>
