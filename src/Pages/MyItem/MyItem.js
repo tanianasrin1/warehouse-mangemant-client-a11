@@ -55,7 +55,10 @@ const MyItem = () => {
     }
     return (
         <div className='container'>
-        <h2 className='text-center mt-3'> My Item Page</h2>
+            <div>
+            <h2 className='text-center mt-3'> My Item Page</h2>
+            </div> 
+
          <div className='inventoryItem'>
          {
             inventories.map(inventory => <InventoryItem 
