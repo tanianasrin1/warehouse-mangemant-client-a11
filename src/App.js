@@ -52,7 +52,7 @@ function App() {
         }></Route>
         <Route path='/myItem' element={
           <RequireAuth>
-          <MyItem></MyItem>
+            <MyItem></MyItem>
           </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
